@@ -56,7 +56,7 @@ int main() {
             break;
         }
     }
-
+    // 6
     if (found) {
         printf("\nСлово \"%s\" найдено в тексте\n", target);
     } else {
