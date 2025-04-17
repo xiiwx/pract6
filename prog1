@@ -1,35 +1,35 @@
 #include <stdio.h>
 
 int main() {
-    // Симулируем многострочный ввод
+    
     char lines[3][30] = {
         "/test.txt",
         "Привет",
         "Мир"
     };
 
-    // 1. Выводим имя файла
+    // 1
     printf("Имя файла: %s\n", lines[0]);
 
-    // 2. Объединяем строки содержимого
+    // 2
     char content[100];
     int index = 0;
-    for (int i = 1; i < 3; i++) { // строки со 2 по последнюю
+    for (int i = 1; i < 3; i++) { 
         int j = 0;
         while (lines[i][j] != '\0') {
             content[index] = lines[i][j];
             index++;
             j++;
         }
-        content[index] = '\n'; // добавляем перенос строки
+        content[index] = '\n'; 
         index++;
     }
-    content[index] = '\0'; // конец всей строки
+    content[index] = '\0'; 
 
-    // 3. Выводим содержимое
+    // 3
     printf("\nСодержимое файла:\n%s", content);
 
-    // 4. Проверяем, есть ли слово "Привет"
+    // 4
     char target[] = "Привет";
     int contentLength = 0;
     int targetLength = 0;
