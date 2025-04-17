@@ -1,17 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    
+    // 1
     char lines[3][30] = {
         "/test.txt",
         "Привет",
         "Мир"
     };
 
-    // 1
+    // 2
     printf("Имя файла: %s\n", lines[0]);
 
-    // 2
+    // 3
     char content[100];
     int index = 0;
     for (int i = 1; i < 3; i++) { 
@@ -26,10 +26,10 @@ int main() {
     }
     content[index] = '\0'; 
 
-    // 3
+    // 4
     printf("\nСодержимое файла:\n%s", content);
 
-    // 4
+    // 5
     char target[] = "Привет";
     int contentLength = 0;
     int targetLength = 0;
